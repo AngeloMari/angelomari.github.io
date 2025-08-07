@@ -1,3 +1,5 @@
+// Not being used right now since everything already has content.
+
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;

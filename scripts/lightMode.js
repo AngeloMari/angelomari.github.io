@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const themeButtons = document.querySelectorAll(".theme-switch");
 
-  // Function to (reload and modify particles config
+  // Modify particles
   function loadParticles(isLightMode) {
-    fetch("/scripts/particles-config.json") // update path if different
+    fetch("/scripts/particles-config.json")
       .then((res) => res.json())
       .then((config) => {
         const newColor = isLightMode ? "#333333" : "#fefefe";
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load particles on initial load
   loadParticles(isLight);
 
-  // Theme toggle logic
+  // Theme toggle
   function toggleTheme() {
     body.classList.toggle("lightmode");
     const isNowLight = body.classList.contains("lightmode");
